@@ -1,6 +1,12 @@
 # Stock Algorithms... an Exploration
 
 ### Introduction
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/user-attachments/assets/b02eb091-0ee0-4202-ae1d-fd3bbb43bc3d" alt="ScreenRecording2024-08-04at12 03 42PM-ezgif com-crop-2" style="width: 100%;">
+  <img src="https://github.com/user-attachments/assets/c97566bd-ff69-44cb-8d20-612819b984ad" alt="image" style="width: 32%;">
+</div>
+
 It would be really fun if I had a successful stock trading algorithm. If I could find just one algorithm that looks at a special part of the stock market in a special way that can better predict the future of a stock than the market, I would be rich! I understand that it is not really possible to win in the stockmarket algorithmicly trading. People spend their whole careers doing it. Never the less, I thought it would be interesting to applying simple algorithms to different stocks to see how they perform.
 
 
@@ -13,12 +19,12 @@ The greedy algorithm I devised examines a day's trading activity. At each minute
 The caveat: what I did not know about which I had to learn about was trading fees. Every cryptocaurrency trading platform takes about 0.1% trading fees. While i was making money at 1 minute intervals on cryptocurrencies, the algorithms was making about 600 trades a day, at the 0.1% rate, the fees ate away at my profits and I ended up loosing money.
 
 ### Results:
+<img width="1142" alt="image" src="https://github.com/user-attachments/assets/630e3f2e-19cb-4828-a832-3444a21daf0d">
+
 
 ### Exploration
 
 ### Example Output
-<img width="529" alt="image" src="https://github.com/user-attachments/assets/cbd28e7d-d212-4f40-b830-90050f49e01f">
-<img width="536" alt="image" src="https://github.com/user-attachments/assets/1569e28e-affd-48a4-8a35-909bf1846df5">
 
 
 ### Interesting Takeaways
@@ -27,5 +33,15 @@ If a genie came to you and said they would give you tomorrows trading stats of a
 ### Conclusion
 You can not predict the future. I believe this in a practical and also philosophical level. 
 
-### Next Steps
-Recurrent Neural Network
+
+
+
+
+
+
+
+<!--
+![ScreenRecording2024-08-04at12 03 42PM-ezgif com-crop-2](https://github.com/user-attachments/assets/b02eb091-0ee0-4202-ae1d-fd3bbb43bc3d)
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/c97566bd-ff69-44cb-8d20-612819b984ad">
+--!>
+
