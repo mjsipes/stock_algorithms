@@ -1,47 +1,30 @@
+
 # Stock Algorithms... an Exploration
 
+
+<img width="1142" alt="image" src="https://github.com/user-attachments/assets/b02eb091-0ee0-4202-ae1d-fd3bbb43bc3d">
+
+
+### Overview
+This project explores the performance of two different trading algorithms—a perfect foresight algorithm and a simple greedy algorithm—on various stocks and cryptocurrencies over the course of a month.
+
+
 ### Introduction
+In my computer systems class, I learned about cache eviction policies, which use simple heuristics to make decisions under uncertainty. This led me to wonder: can similar heuristics apply to stock trading?
 
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/user-attachments/assets/b02eb091-0ee0-4202-ae1d-fd3bbb43bc3d" alt="ScreenRecording2024-08-04at12 03 42PM-ezgif com-crop-2" style="width: 100%;">
-  <img src="https://github.com/user-attachments/assets/c97566bd-ff69-44cb-8d20-612819b984ad" alt="image" style="width: 32%;">
-</div>
+I wanted to answer the following questions:
 
-It would be really fun if I had a successful stock trading algorithm. If I could find just one algorithm that looks at a special part of the stock market in a special way that can better predict the future of a stock than the market, I would be rich! I understand that it is not really possible to win in the stockmarket algorithmicly trading. People spend their whole careers doing it. Never the less, I thought it would be interesting to applying simple algorithms to different stocks to see how they perform.
+- How much money could you make if you traded Apple stock perfectly, buying every time it was about to rise and selling every time it was about to fall?
+- How would a greedy algorithm, which buys on an upward trend and sells on a downward trend at every minute, perform on Apple stock?
+- How would these two algorithms compare when applied to different stocks and cryptocurrencies over a month?
 
-
-Typically, stocks fluctuate between 1-4 percent in a day, but the intra-day fluctuations can be much larger. This led me to wonder: if you knew the exact price movements of Apple stock for a given day and traded perfectly, what kind of returns could you achieve? To explore this, I wrote a greedy algorithm. At every minute interval, if the stock was set to rise in the next minute and I had cash available, I would buy. Conversely, if the stock was going to decline and I had shares, I would sell.
-
-Of course, in reality, predicting future stock prices accurately is impossible. This got me thinking about alternative strategies. One concept I considered was cache eviction policies, specifically the Least Recently Used (LRU) policy, which is known to be effective for managing caches. I wondered how a simple greedy algorithm, inspired by such policies, would perform in the stock market.
-
-The greedy algorithm I devised examines a day's trading activity. At each minute interval, it checks whether the stock price increased or decreased compared to the previous minute. If the stock price rose and there were funds available, it bought shares. If the stock price fell and there were shares to sell, it sold them.
-
-The caveat: what I did not know about which I had to learn about was trading fees. Every cryptocaurrency trading platform takes about 0.1% trading fees. While i was making money at 1 minute intervals on cryptocurrencies, the algorithms was making about 600 trades a day, at the 0.1% rate, the fees ate away at my profits and I ended up loosing money.
 
 ### Results:
+
 <img width="1142" alt="image" src="https://github.com/user-attachments/assets/630e3f2e-19cb-4828-a832-3444a21daf0d">
 
+The first interesting takeaway: if you could trade Apple stock perfectly for one day—knowing exactly when to buy and sell—you’d average around 10% returns. But if you applied the same strategy to a more volatile asset like Dogecoin, you'd see returns jump to 35%.
 
-### Exploration
+Then, I tried a more realistic approach: a simple greedy algorithm that looks at the trend every minute. This algorithm averaged consistent returns of 4% each day when trading Apple stock and a solid 25% daily return on cryptocurrencies like Dogecoin.
 
-### Example Output
-
-
-### Interesting Takeaways
-If a genie came to you and said they would give you tomorrows trading stats of any stock/market things you wanted. Pick a cryptocurrency, or something volatile. You will make more money!
-
-### Conclusion
-You can not predict the future. I believe this in a practical and also philosophical level. 
-
-
-
-
-
-
-
-
-<!--
-![ScreenRecording2024-08-04at12 03 42PM-ezgif com-crop-2](https://github.com/user-attachments/assets/b02eb091-0ee0-4202-ae1d-fd3bbb43bc3d)
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/c97566bd-ff69-44cb-8d20-612819b984ad">
---!>
-
+But here’s the catch—the one thing I didn’t account for at first: trading fees. Cryptocurrency platforms typically charge about 0.1% per trade. My algorithm was making trades every minute, which meant around 600 trades a day. Those 0.1% fees added up quickly, eating away at my profits and ultimately causing me to lose money.
