@@ -23,8 +23,18 @@ I wanted to answer the following questions:
 
 <img width="1142" alt="image" src="https://github.com/user-attachments/assets/630e3f2e-19cb-4828-a832-3444a21daf0d">
 
-The first interesting takeaway: if you could trade Apple stock perfectly for one day—knowing exactly when to buy and sell—you’d average around 10% returns. But if you applied the same strategy to a more volatile asset like Dogecoin, you'd see returns jump to 35%.
+### Key Observations
 
-Then, I tried a more realistic approach: a simple greedy algorithm that looks at the trend every minute. This algorithm averaged consistent returns of 4% each day when trading Apple stock and a solid 25% daily return on cryptocurrencies like Dogecoin.
+Perfect Foresight Strategy:
+For assets like Apple (AAPL), a perfect trading strategy with minute-by-minute precision could yield around 10.75% average daily returns. However, when applying the same strategy to more volatile assets like Dogecoin (DOGE-USD), the returns dramatically increase to approximately 35.44%.
+This difference highlights the impact of volatility on potential gains; more stable stocks such as Apple provide moderate, consistent returns, while more volatile cryptocurrencies like Dogecoin offer higher potential gains when perfect timing is assumed.
+Greedy Algorithm Performance:
 
-But here’s the catch—the one thing I didn’t account for at first: trading fees. Cryptocurrency platforms typically charge about 0.1% per trade. My algorithm was making trades every minute, which meant around 600 trades a day. Those 0.1% fees added up quickly, eating away at my profits and ultimately causing me to lose money.
+Simple Greedy Algorithm:
+The greedy algorithm, which is a simplified and more realistic approach, examines trends every minute and makes decisions based on short-term momentum.
+This approach averaged about 4.21% daily returns for Apple and a much higher 25.01% for Dogecoin when fees were not considered. These results still demonstrate the higher profitability potential of trading in more volatile assets, but with much more achievable returns given the algorithm's simplicity compared to a perfect foresight strategy.
+Impact of Trading Fees:
+
+Trading Fees:
+Initially, trading fees were not considered in the analysis. However, once you accounted for a typical trading fee of 0.1% per trade, the results painted a very different picture. Given the high-frequency nature of the greedy algorithm—executing approximately 600 trades per day (once per minute)—the cumulative cost of these fees became significant.
+For example, at 0.1% per trade over 600 trades, the fees amounted to a substantial portion of any profits gained. This led to scenarios where, even with high average daily returns, the costs of frequent trading eroded all potential profits, sometimes resulting in overall losses.
