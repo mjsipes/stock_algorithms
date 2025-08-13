@@ -54,46 +54,41 @@ export function TradingResults({ results }: TradingResultsProps) {
 
   return (
     <div className="space-y-6">
+      {/* Summary Cards */}
+      <ComparisonCard results={results} />
       {/* Performance Comparison Chart */}
       <PerformanceChart results={results} />
       
-      {/* Summary Cards */}
-      <ComparisonCard results={results} />
 
       {/* Combined Trading History */}
       {results.length === 2 && (
         <Card className="border border-border">
           <CardHeader className="p-4 pb-2">
             <CardTitle className="text-lg">
-              Algorithm Comparison - Trading History
+            Algorithm Performance Comparison Table
             </CardTitle>
-            <CardDescription>
-              Point-by-point comparison of trading decisions and performance
-            </CardDescription>
           </CardHeader>
           <CardContent className="p-4 pt-0">
             <div className="overflow-x-auto">
               <Table className="text-xs">
-                <TableCaption className="text-xs text-muted-foreground">
-                  Side-by-side comparison of perfect vs greedy algorithm decisions
-                </TableCaption>
+
                 <TableHeader>
-                  <TableRow className="border-border h-8">
+                  <TableRow className="border-border h-8 hover:bg-transparent">
                     <TableHead className="text-xs py-1 px-2" rowSpan={2}>Time</TableHead>
                     <TableHead className="text-xs py-1 px-2" rowSpan={2}>Price</TableHead>
                     <TableHead className="text-xs py-1 px-2 " rowSpan={2}>Change</TableHead>
-                    <TableHead className="text-xs py-1 px-2 text-center border-r border-border" colSpan={4}>Perfect Algorithm</TableHead>
-                    <TableHead className="text-xs py-1 px-2 text-center" colSpan={4}>Greedy Algorithm</TableHead>
+                    <TableHead className="text-xs py-1 px-2 text-center border-l border-r border-t border-border" colSpan={4}>Perfect Algorithm</TableHead>
+                    <TableHead className="text-xs py-1 px-2 text-center border-t border-r border-border" colSpan={4}>Greedy Algorithm</TableHead>
                   </TableRow>
-                  <TableRow className="border-border h-8">
-                    <TableHead className="text-xs py-1 px-2">Action</TableHead>
-                    <TableHead className="text-xs py-1 px-2">Cash</TableHead>
-                    <TableHead className="text-xs py-1 px-2">Shares</TableHead>
-                    <TableHead className="text-xs py-1 px-2 border-r border-border">Net Worth</TableHead>
-                    <TableHead className="text-xs py-1 px-2">Action</TableHead>
-                    <TableHead className="text-xs py-1 px-2">Cash</TableHead>
-                    <TableHead className="text-xs py-1 px-2">Shares</TableHead>
-                    <TableHead className="text-xs py-1 px-2">Net Worth</TableHead>
+                  <TableRow className="border-border h-8 hover:bg-transparent">
+                    <TableHead className="text-xs py-1 px-2 border-l border-b border-border">Action</TableHead>
+                    <TableHead className="text-xs py-1 px-2 border-b border-border">Cash</TableHead>
+                    <TableHead className="text-xs py-1 px-2 border-b border-border">Shares</TableHead>
+                    <TableHead className="text-xs py-1 px-2 border-r border-b border-border">Net Worth</TableHead>
+                    <TableHead className="text-xs py-1 px-2 border-b border-border">Action</TableHead>
+                    <TableHead className="text-xs py-1 px-2 border-b border-border">Cash</TableHead>
+                    <TableHead className="text-xs py-1 px-2 border-b border-border">Shares</TableHead>
+                    <TableHead className="text-xs py-1 px-2 border-r border-b border-border">Net Worth</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -116,7 +111,7 @@ export function TradingResults({ results }: TradingResultsProps) {
                         </TableCell>
                         
                         {/* Perfect Algorithm Columns */}
-                        <TableCell className="py-1 px-2">
+                        <TableCell className="py-1 px-2 border-l border-border">
                           <Badge 
                             variant="outline" 
                             className={`${getActionColor(perfectAction.action)} border-current text-xs h-5`}
@@ -149,7 +144,7 @@ export function TradingResults({ results }: TradingResultsProps) {
                         <TableCell className="font-mono py-1 px-2">
                           {greedyAction.shares.toFixed(4)}
                         </TableCell>
-                        <TableCell className={`font-mono font-medium py-1 px-2 ${getPerformanceColor(greedyAction.networth - results[1].initialInvestment)}`}>
+                        <TableCell className={`font-mono font-medium py-1 px-2 ${getPerformanceColor(greedyAction.networth - results[1].initialInvestment)} border-r border-border`}>
                           {formatCurrency(greedyAction.networth)}
                         </TableCell>
                       </TableRow>

@@ -77,9 +77,8 @@ const Index = () => {
           {isSimulating ? (
             <div className="flex items-center justify-center h-[50vh]">
               <div className="text-center space-y-4">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
                 <p className="text-lg text-muted-foreground">Running trading simulation...</p>
-                <p className="text-sm text-muted-foreground">Analyzing market data and executing trades</p>
+                <img src="/favicon.ico" alt="Loading" className="h-12 w-12 mx-auto" />
               </div>
             </div>
           ) : results.length > 0 ? (

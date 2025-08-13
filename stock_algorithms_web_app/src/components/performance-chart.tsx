@@ -41,11 +41,8 @@ export function PerformanceChart({ results }: PerformanceChartProps) {
 
   return (
     <Card className="w-full">
-      <CardHeader>
-        <CardTitle className="text-xl font-bold">Algorithm Performance Comparison</CardTitle>
-        <CardDescription>
-          Real-time networth comparison between Perfect and Greedy algorithms
-        </CardDescription>
+      <CardHeader className="p-4 ">
+        <CardTitle className="text-lg">Algorithm Performance Comparison Chart</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="h-96 w-full">

@@ -41,9 +41,6 @@ export function TradingForm({ onSimulate, isSimulating, onReset }: TradingFormPr
       <div className="space-y-6">
         <div>
           <h2 className="text-xl font-bold">Simulation Parameters</h2>
-          <p className="text-sm text-muted-foreground mt-1">
-            Configure your trading strategy test
-          </p>
         </div>
 
         <div className="space-y-4">
